@@ -7,11 +7,11 @@
 #include "Continue.h"
 using namespace std;
 
-//class MyGame{
-//	private:
-//	
-//	public:
-//};
+class MyGame{
+	private:
+	
+	public:
+};
 
 //class Player{
 //	private:
