@@ -2,13 +2,16 @@
 
 #include <iostream>
 #include <stdlib.h>
+#include "Players.h"
 using namespace std;
+
 
 class Continue{
 	private:
 	string con;
 
 	public:
+  Players players;
 	Continue();
 	~Continue();
 	string getcon();
@@ -32,6 +35,7 @@ void Continue::setcon(){
 		if(con == "C" || con == "c"){
 			cout << "Okay, let's continue" << endl;
 			con = "C";
+      players.SetID();
 			break;
 		}
 		if(con == "E" || con == "e"){

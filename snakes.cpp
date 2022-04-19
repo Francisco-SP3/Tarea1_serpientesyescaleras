@@ -1,4 +1,6 @@
 //Francisco Salas Porras A01177893
+//Iván López A01284875
+//Gabriel Ruiz Miller A00835179
 
 #include <iostream>
 #include <stdlib.h>
@@ -7,11 +9,11 @@
 #include "Continue.h"
 using namespace std;
 
-class MyGame{
-	private:
-	
-	public:
-};
+//class MyGame{
+//	private:
+//	
+//	public:
+//};
 
 //class Player{
 //	private:
@@ -27,6 +29,8 @@ class MyGame{
 //	
 //};
 
+
+
 // class Dice{
 //
 //};
@@ -39,6 +43,15 @@ class MyGame{
 //	Tile(string);
 //	~Tile();
 //};
+class Tile{
+	private:
+	string tablero, N, S, L;
+  int n=30;
+	public:
+	Tile();
+	Tile(string);
+	~Tile();
+};
 //
 //Tile::Tile(){
 //	
