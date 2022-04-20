@@ -1,10 +1,10 @@
 //Francisco Salas Porras A01177893
+//Iván López A01284875
 
 #include <iostream>
 #include <stdlib.h>
 #include <chrono>
 #include <thread>
-#include "Players.h"
 using namespace std;
 
 class Continue{
@@ -13,10 +13,9 @@ class Continue{
 	string con;
 //Publicas
 	public:
-  Players players;
 	Continue();
 	~Continue();
-	string getcon();
+	bool getcon();
 	void setcon();
 };
 
@@ -26,24 +25,30 @@ Continue::Continue(){
 
 Continue::~Continue(){}
 
-string Continue::getcon(){
-	return con;
+bool Continue::getcon(){
+	if(con == "C" || con == "c"){
+		return true;
+	}
+	if(con == "E" || con == "e"){
+		return false;
+	}
 }
 
 void Continue::setcon(){
 	while(true){
 		cout << "\nPress C to continue next turn, or E to end the game" << endl;
 		cin >> con;
+    // Continuar con el juego, opción "C"
 		if(con == "C" || con == "c"){
 			cout << "\nOkay, let's continue..." << endl;
 			con = "C";
 			chrono::seconds dura(2);
 			this_thread::sleep_for(dura);
-      players.SetID();
 			break;
 		}
+    // Terminar con el juego, opción "E"
 		if(con == "E" || con == "e"){
-			cout << "\nOkay, see you later!" << endl;
+			cout << "\nThanks for playing!" << endl;
 			con = "E";
 			break;
 		}
