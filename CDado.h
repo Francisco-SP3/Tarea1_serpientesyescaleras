@@ -1,10 +1,16 @@
-#ifndef CDADO_H_INCLUDED
-#define CDADO_H_INCLUDED
 #include <ctime>
 #include <cstdlib>
+
 class CDado{
-    public:
-        CDado();
-        int GetValorDado();
+  public:
+    CDado();
+    int GetValorDado();
 };
-#endif // CDADO_H_INCLUDED
+
+CDado::CDado(){
+  srand(time(0));
+}
+
+int CDado::GetValorDado(){
+  return  (rand() % 6) + 1;
+}

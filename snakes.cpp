@@ -43,15 +43,6 @@ using namespace std;
 //	Tile(string);
 //	~Tile();
 //};
-class Tile{
-	private:
-	string tablero, N, S, L;
-  int n=30;
-	public:
-	Tile();
-	Tile(string);
-	~Tile();
-};
 //
 //Tile::Tile(){
 //	
@@ -73,7 +64,13 @@ class Tile{
 //};
 
 //class Ladder : public Tile{
-//	
+//	private:
+//	int reward;
+//	public:
+//	Escalera();
+//	~Escalera();
+//	int setreward();
+//	int getreward();
 //};
 
 //class Tablero{
