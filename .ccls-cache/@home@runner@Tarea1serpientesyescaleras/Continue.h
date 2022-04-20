@@ -39,6 +39,7 @@ void Continue::setcon(){
 			con = "C";
 			chrono::seconds dura(2);
 			this_thread::sleep_for(dura);
+      players.SetID();
 			break;
 		}
 		if(con == "E" || con == "e"){

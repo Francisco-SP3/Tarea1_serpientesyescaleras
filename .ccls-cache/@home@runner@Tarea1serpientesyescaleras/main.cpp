@@ -9,14 +9,7 @@
 #include "Continue.h"
 #include "CDado.h"
 #include "MyGame.h"
-#include "Players.h"
 using namespace std;
-
-//class MyGame{
-//	private:
-//	
-//	public:
-//};
 
 //class Player{
 //	private:
@@ -38,22 +31,28 @@ using namespace std;
 //
 //};
 
-//class Tile{
-//	private:
-//	string tablero;
-//	public:
-//	Tile();
-//	Tile(string);
-//	~Tile();
-//};
-//
-//Tile::Tile(){
-//	
-//}
-//
-//Tile::Tile(string _s){
-//	
-//};
+class Tile{
+
+	private:
+	string casilla;
+	//Players p1;
+	//Players p2;
+
+	public:
+	Tile();
+	Tile(string);
+	~Tile();
+};
+
+Tile::Tile(){
+	casilla = "N";
+}
+
+Tile::Tile(string _casilla){
+	casilla = _casilla;
+};
+
+
 
 //class Serpiente : public Tile{
 //	private:
@@ -88,16 +87,11 @@ using namespace std;
 			// for i 2:29
 
 int main() {
-
-	//MyGame snakes;
+	MyGame juego;
+	juego.startGame();
 	
-	//snakes.startGame();
-
-	//Continue continuar;
-  
-	//CDado tiraDado;
-	//continuar.setcon();
-	//cout << tiraDado.GetValorDado() << endl;
-	Players play(1);
-  play.get(1);
+	Continue continuar;
+	CDado tiraDado;
+	continuar.setcon();
+	cout << tiraDado.GetValorDado() << endl;
 }
