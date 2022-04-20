@@ -7,6 +7,8 @@
 #include <chrono>
 #include <thread>
 #include "Continue.h"
+#include "CDado.h"
+#include "MyGame.h"
 using namespace std;
 
 //class MyGame{
@@ -85,9 +87,12 @@ using namespace std;
 			// for i 2:29
 
 int main() {
+	MyGame snakes;
+	
+	snakes.startGame();
+
 	Continue continuar;
+	CDado tiraDado;
 	continuar.setcon();
-	chrono::seconds dura(2);
-	this_thread::sleep_for(dura);
-	cout << continuar.getcon() << endl;
+	cout << tiraDado.GetValorDado() << endl;
 }
