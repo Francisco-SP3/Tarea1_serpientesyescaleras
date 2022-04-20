@@ -9,6 +9,7 @@
 #include "Continue.h"
 #include "CDado.h"
 #include "MyGame.h"
+#include "Players.h"
 using namespace std;
 
 //class MyGame{
@@ -87,12 +88,16 @@ using namespace std;
 			// for i 2:29
 
 int main() {
-	MyGame snakes;
-	
-	snakes.startGame();
 
-	Continue continuar;
-	CDado tiraDado;
-	continuar.setcon();
-	cout << tiraDado.GetValorDado() << endl;
+	//MyGame snakes;
+	
+	//snakes.startGame();
+
+	//Continue continuar;
+  
+	//CDado tiraDado;
+	//continuar.setcon();
+	//cout << tiraDado.GetValorDado() << endl;
+	Players play(1);
+  play.get(1);
 }

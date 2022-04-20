@@ -1,5 +1,5 @@
-class Tile{
+class Casilla{
   public:
-  int tablero[30];
+  //int tablero[30];
   
 }
