@@ -42,6 +42,15 @@ Tablero::Tablero(Casilla N,Snake S,Ladder L){
 			veces_N = veces_N - 1;
     }
 	}
+  //for(int i=0;i<30;i++){
+    //tab[i]=N.getNombre();
+    //}
+  //tab[4]=L.getNombre();
+  //tab[15]=L.getNombre();
+  //tab[27]=L.getNombre();
+  //tab[9]=S.getNombre();
+  //tab[17]=S.getNombre();
+  //tab[29]=S.getNombre();
 }
 
 string Tablero::getTablero(int _num){

@@ -8,6 +8,8 @@ class Players{
   private:
 	int iD;
 	int casilla;
+	bool efecto_realizado;
+	int num_dado;
 
 	public:
 	Players();
@@ -18,17 +20,26 @@ class Players{
 	int getID();
 	void setCasilla(int);
 	int getCasilla();
+	void setEfectoR(bool);
+	bool getEfectoR();
+	void setNumDado(int);
+	int getNumDado();
+	int getCasillaO();
 	int throwDice();
 };
 
 Players::Players(){
 	iD = 1;
 	casilla = 1;
+	efecto_realizado = false;
+	int num_dado = 0;
 }
 
 Players::Players(int _iD){
   iD = _iD;
 	casilla = 1;
+	efecto_realizado = false;
+	int num_dado = 0;
 }
 
 // setters y getters de la clase Players para identificar a cada uno de los jugadores con un numero que indica su orden de turno, así como la asignación de la casilla inicial para cada uno
@@ -58,5 +69,28 @@ int Players::throwDice(){
 	if (casilla > 30){
 		casilla = 30; //no se sobrepasa la casilla 30 
 	}
+	num_dado = n_dado;
 	return n_dado;
+}
+
+void Players::setEfectoR(bool _ef){
+	efecto_realizado = _ef;
+}
+	
+
+bool Players::getEfectoR(){
+	return efecto_realizado;
+}
+
+void Players::setNumDado(int _nd){
+	num_dado = _nd;
+}
+	
+
+int Players::getNumDado(){
+	return num_dado;
+}
+
+int Players::getCasillaO(){
+	return casilla-num_dado;
 }
